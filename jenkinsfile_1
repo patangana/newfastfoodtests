@@ -10,7 +10,7 @@ pipeline {
 
         stage(" SonarQube analysis") {
             
-            def scannerHome = tool 'SonarScanner 4.0'
+            agent any
         
             steps {
                 dir('./fastfood_BackEnd/') {
