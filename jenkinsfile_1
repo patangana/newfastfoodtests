@@ -8,10 +8,11 @@ pipeline {
 }
     stages {
 
-        stage("build & SonarQube analysis") {          
+        stage("build & SonarQube analysis") {     
+            agent any     
             steps {
-                dir('./fastfood_BackEnd/'){
-                    withSonarQubeEnv('sonarQube') {
+                dir('./fastfood_BackEnd/') {
+                    withSonarQubeEnv('My SonarQube Server') {
                    sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=patangana_newfastfoodtests'
                         }
                 }
