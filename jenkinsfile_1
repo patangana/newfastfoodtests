@@ -15,8 +15,7 @@ pipeline {
             steps {
                 dir('./fastfood_BackEnd/') {
                     withSonarQubeEnv('sonarqube') {
-                   sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=patangana_newfastfoodtests'
-                        }
+                   sh 'mvn clean package sonar:sonar'
                 }
             }
           }
