@@ -15,7 +15,7 @@
 	<description>the fastfood project </description>
 	<properties>
 		<java.version>11</java.version>
-  		sonar.organization>patangana-newfastfoodtest</sonar.organization>
+  		<sonar.organization>patangana-newfastfoodtest</sonar.organization>
   		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
